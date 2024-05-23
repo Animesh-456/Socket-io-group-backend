@@ -4,10 +4,18 @@ import http from 'http';
 import serverless from 'serverless-http';
 
 const app = express();
+app.use(cors({
+    origin: 'https://socket-io-group-frontend.vercel.app', // Replace with your frontend URL
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+    credentials: true
+}));
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: '*',
+        origin: 'https://socket-io-group-frontend.vercel.app', // Replace with your frontend URL
+        methods: ['GET', 'POST'],
+        credentials: true
     },
 });
 
