@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node netlify/functions/express.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",

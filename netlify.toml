@@ -1,8 +1,0 @@
-[build]
-  functions = "netlify/functions"
-  publish = "public"
-
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/express"
-  status = 200
