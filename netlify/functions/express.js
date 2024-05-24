@@ -14,8 +14,6 @@ const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
         origin: 'https://socket-io-group-frontend.vercel.app', // Replace with your frontend URL
-        methods: ['GET', 'POST'],
-        credentials: true
     },
 });
 
